@@ -6,7 +6,8 @@
 trigger:
 - master
 
-pool: ajithagent
+pool: 
+  vmImage: 'ubuntu-latest'
   
 
 steps:
