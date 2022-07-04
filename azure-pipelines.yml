@@ -36,5 +36,5 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Pay-As-You-Go(af5a6fb3-b792-4f0e-aa58-7cf18b9cad30)'
     appType: 'webAppLinux'
-    WebAppName: 'ajith_practise'
+    WebAppName: 'ajithkumardev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.war'
