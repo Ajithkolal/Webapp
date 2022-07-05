@@ -31,21 +31,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Pay-As-You-Go(af5a6fb3-b792-4f0e-aa58-7cf18b9cad30)'
-    subscriptionId: 'af5a6fb3-b792-4f0e-aa58-7cf18b9cad30'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'Akdev'
-    location: 'Australia East'
-    templateLocation: 'Linked artifact'
-    csmFile: '$(Build.ArtifactStagingDirectory)/drop/maven-web-application/'
-    deploymentMode: 'Incremental'
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Pay-As-You-Go(af5a6fb3-b792-4f0e-aa58-7cf18b9cad30)'
     appType: 'webAppLinux'
-    WebAppName: 'Akdev'
+    WebAppName: 'Ajithkumardev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.war'
